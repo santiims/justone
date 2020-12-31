@@ -1,31 +1,33 @@
 <template>
 	<div>
 		<div class="brown">
-			<router-link :to="{name: 'start'}">
-				<div class="back">
-					<img src="back.svg" alt="back"/>
+			<div class="bg-color-brown">
+				<router-link :to="{name: 'start'}">
+					<div class="back">
+						<img src="images\back.svg" alt="back" class="filter-white arrow-size"/>
+					</div>
+				</router-link>
+
+				<div class="logo">
+					<img src="images\logo.svg" alt="logo" class="logo-medium d-block mx-auto"/>
 				</div>
-			</router-link>
+				<div class="d-flex flex-row text-center text-white">
+					<div class="register py-3 flex-grow-1 login-signup-active-bar" @click="initRegister">
+						PIEREĢISTRĒTIES
+					</div>
 
-			<div class="logo">
-				<img src="logo.svg" alt="logo"/>
+					<div class="login py-3 flex-grow-1" @click="initLogin">
+						IEIET
+					</div>
+				</div>
 			</div>
-
-			<div class="register" @click="initRegister">
-				Piereģistrēties
-			</div>
-
-			<div class="login" @click="initLogin">
-				Ieiet
-			</div>
-
-			<div class="credentials">
-				<VueInput @valueChanged="setUsername"/>
+			<div class="credentials my-4 text-center">
+				<VueInput @valueChanged="setUsername" class="mb-3"/>
 				<VueInput @valueChanged="setPassword" :isPassword="true"/>
 			</div>
 
-			<div class="continue" @click="submit">
-				<img src="continue.svg" alt="continue"/>
+			<div class="continue bg-color-brown py-1" @click="submit">
+				<img src="images\continue.svg" alt="continue" class="filter-white arrow-size d-block mx-auto"/>
 			</div>
 		</div>
 	</div>

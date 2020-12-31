@@ -1,9 +1,9 @@
 <template>
-	<div>
-		<img src="logo.svg" alt="logo"></img>
-		<h3>Par spēli</h3>
+	<div class="container mt-2">
+		<img src="images\logo.svg" alt="logo" class="logo-small d-inline"/>
+		<h3 class="color-brown d-inline">Par spēli</h3>
 		
-		<p>
+		<p class="mt-4">
 			<b>
 				"Tikai Viens" ir kooperatīva ballīšu spēle.
 				Darbojieties kopā, lai atklāti tik daudz slepeno vārdu, cik vien iespējams!
@@ -20,7 +20,7 @@
 			Lai iegūtu savu rezultātu, saskaitiet savus veiksmīgi atminētās kārtis un salīdziniet to kopējo skaitu ar tabulu.
 		</p>
 		
-		<h3>Spēles gaita</h3>
+		<h3 class="color-brown mt-4">Spēles gaita</h3>
 		
 		<p>
 			Kopā spēlei ir 13 gājieni, pēc tam tiek skaitīti atminētie noslēpumainie vārdi un salīdzina punktus ar <b>kopējo rezultātu tabulu</b>.
@@ -36,21 +36,25 @@
 				<li>Minēt</li>
 			</ol>
 		</p>
-		
-		<div class="bg-triangle">
-			1
+
+		<div class="d-flex flex-row">
+			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
+				1
+			</div>
+			<h4 class="color-brown">Izvēlieties noslēpumaino vārdu</h4>
 		</div>
-		<h4>Izvēlieties noslēpumaino vārdu</h4>
-		
+
 		<p>
 			Aktīvais spēlētājs izvēlas vienu no pieciem noslēpumainajiem vārdiem, kuram pārējie spēlētāji rakstīs pavedienus.
 		</p>
-		
-		<div class="bg-triangle">
-			2
+
+		<div class="d-flex flex-row">
+			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
+				2
+			</div>
+			<h4 class="color-brown">Pavediena izdomāšana</h4>
 		</div>
-		<h4>Pavediena izdomāšana</h4>
-		
+
 		<p>
 			Bez sarunāšanās katrs no spēlētājiem domā pavedienu, bet var rakstīt <i>Tikai Vienu vārdu</i>.
 		</p>
@@ -65,26 +69,28 @@
 			un <i>$</i> ir atļauts palīdzēt kādam uzminēt <i>Ameriku</i>.
 		</p>
 		
-		<h4>Nederīgie vārdi</h4>
+		<h4 class="color-brown">Nederīgie vārdi</h4>
 		
-		<ul>
+		<ul class="color-brown">
 			<li>Noslēpumainais vārds, bet ir rakstīts savādāk. <i>Piemērs:</i> Auksts un Augsts</li>
 			<li>Noslēpumainais vārds rakstīts svešvalodā. <i>Piemērs:</i> Pipars un Pepper</li>
 			<li>Izdomāts vārds. <i>Piemērs:</i> Ekipējums un Epikējums</li>
 			<li>Vienāda sakne. <i>Piemērs:</i> Kalns un Pakalniņš</li>
 		</ul>
-		
-		<div class="bg-triangle">
-			3
+
+		<div class="d-flex flex-row">
+			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
+				3
+			</div>
+			<h4 class="color-brown">Pavedienu salīdzināšana</h4>
 		</div>
-		<h4>Pavedienu salīdzināšana</h4>
-		
+
 		<p>
 			Tad, kad visi spēlētāji ir izdomājuši un uzrakstījuši savus pavedienus,
 			tad spēles vadītājs izņem līdzīgos un nederīgos vārdus, jo pavediens var būt <i>Tikai Viens</i> arī starp uzrakstītajiem vārdiem. 
 		</p>
 		
-		<h4>Vienādie vārdi:</h4>
+		<h4 class="color-brown">Vienādie vārdi:</h4>
 		
 		<p>
 			Divi identiski vārdi. <i>Piemērs:</i> Punkts un Punkts.
@@ -101,12 +107,14 @@
 		<p>
 			<b>Piezīme:</b> Ja visi vārdi ir tikuši izņemti, tad šis gājiens tiek skaitīts kā pabeigts un neieskaitīts. Spēli sāk jauns aktīvais spēlētājs.
 		</p>
-		
-		<div class="bg-triangle">
-			3
+
+		<div class="d-flex flex-row">
+			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
+				4
+			</div>
+			<h4 class="color-brown">Minēt</h4>
 		</div>
-		<h4>Minēt</h4>
-		
+
 		<p>
 			Tiklīdz vadītājs ir izņēmis visus līdzīgos un nederīgos pavedienus, tad aktīvais spēlētājs sāk minēt vārdu ar atlikušo pavedienu palīdzību.
 		</p>
@@ -120,7 +128,7 @@
 		</p>
 		
 		<router-link :to="{name: 'login'}">
-			<button class="btn-start-game">
+			<button class="btn btn-outline-danger btn-lg">
 				Sākt spēli
 			</button>
 		</router-link>

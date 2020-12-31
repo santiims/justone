@@ -27,3 +27,7 @@ Route::get('/login', fn() => view('welcome'));
 
 // RPC calls
 Route::post('/login-rpc', [LoginRpcController::class, 'login']);
+
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

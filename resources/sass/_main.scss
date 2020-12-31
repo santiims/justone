@@ -1,0 +1,65 @@
+body {
+    max-width: 320px;
+}
+
+p {
+    color: #998675;
+}
+
+.color-brown {
+    color: #998675;
+}
+
+.filter-brown {
+    filter: invert(61%) sepia(3%) saturate(2020%) hue-rotate(347deg) brightness(89%) contrast(86%);
+}
+
+.filter-white {
+    filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(82deg) brightness(105%) contrast(97%);
+}
+
+.bg-color-brown {
+    background-color: #998675;
+}
+
+.logo-big {
+    width: 250px;
+}
+
+.logo-medium {
+    width: 200px;
+}
+
+.logo-small {
+    width: 100px;
+}
+
+.info-size {
+    width: 50px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.arrow-size {
+    width: 40px;
+}
+
+.login-signup-active-bar {
+    border-bottom: 5px solid #C7B299;
+}
+
+.bg-triangle {
+    background-image: url('../../public/images/triangle.svg');
+    background-repeat: no-repeat;
+    background-size: 50px;
+    min-height: 53px;
+    max-height: 53px;
+    min-width: 70px;
+    font-size: 18px;
+}
