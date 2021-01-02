@@ -7,6 +7,8 @@ import Main from './components/main';
 import Start from './components/start';
 import Info from './components/info';
 import Login from './components/login';
+import Createjoin from './components/createjoin';
+import Create from './components/create';
 import Join from './components/join';
 
 Vue.use(VueRouter);
@@ -15,6 +17,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
 	state: {
 		username: '',
+        code: null
 	},
 	mutations: {
 
@@ -25,7 +28,10 @@ const store = new Vuex.Store({
 	getters: {
 		username() {
 			return this.state.username;
-		}
+		},
+        code() {
+		    return this.state.code;
+        }
 	}
 });
 
@@ -48,10 +54,20 @@ const router = new VueRouter({
 			component: Login
 		},
 		{
-			path: '/join',
-			name: 'join',
-			component: Join
-		}
+			path: '/createjoin',
+			name: 'createjoin',
+			component: Createjoin
+		},
+        {
+            path: '/create',
+            name: 'create',
+            component: Create
+        },
+        {
+            path: '/join',
+            name: 'join',
+            component: Join
+        }
 	]
 });
 

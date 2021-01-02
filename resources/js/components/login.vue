@@ -22,7 +22,8 @@
 				</div>
 			</div>
 			<div class="credentials my-4 text-center">
-				<VueInput @valueChanged="setUsername" class="mb-3"/>
+				<VueInput @valueChanged="setUsername" :limit="10"/>
+                <div class="mb-3"></div>
 				<VueInput @valueChanged="setPassword" :isPassword="true"/>
 			</div>
 
@@ -55,21 +56,22 @@
 				this.anonymousUser = false;
 			},
 			submit() {
-				axios.post('/login-rpc', {
+				axios.post('/login-rpc/login', {
 					username: this.username,
 					password: this.password,
 					anonymousUser: this.anonymousUser
 				})
 					.then(response => {
-						const success = !!response.data;
-
-						if (success) {
+						if (!!response.data) {
 							this.$store.state.username = this.username;
 							// All good, continue to next screen
-							this.$router.push('join');
+							this.$router.push('createjoin');
 						}
 					})
-					.catch(e => console.log(e))
+					.catch(e => {
+						console.log(e);
+						alert('Something went wrong! Try refreshing the page and logging in again');
+					})
 			},
 			setUsername(username) {
 				this.username = username;
