@@ -17,7 +17,7 @@
 
 			<router-link :to="{name: 'login'}">
 				<button class="btn btn-outline-danger btn-lg my-5 mx-auto d-block">
-					<span class="color-brown">Sākt spēli</span>
+					Sākt spēli
 				</button>
 			</router-link>
 
@@ -41,9 +41,9 @@
 </template>
 
 <style scoped>
-	.btn:hover {
-		background-color: #FDFBF7;
-	}
+button {
+    border-radius: 35px;
+}
 </style>
 
 <script>

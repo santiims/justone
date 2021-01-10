@@ -5,7 +5,7 @@
                 <img src="images\logo.svg" alt="logo" class="logo-small"/>
             </div>
             <div class="message d-inline px-3">
-                <h5 class="color-brown m-0 font-weight-bold">{{ getMessage }}</h5>
+                <h5 class="m-0 font-weight-bold">{{ getMessage }}</h5>
             </div>
             <div class="info d-inline ml-auto">
                 <router-link :to="{name: 'info'}">
@@ -13,16 +13,23 @@
                 </router-link>
             </div>
         </div>
+        <div class="text-center container">
+            <h2>Izveidot spēli</h2>
 
-        <h2>Izveidot spēli</h2>
+            <p class="text-left">Istabas kods:</p>
 
-        <p>Istabas kods:</p>
+            <h3 v-if="code">{{ code }}</h3>
 
-        <h3 v-if="code">{{ code }}</h3>
-
-        <button @click="start">Izveidot</button>
+            <button class="btn btn-outline-danger btn-lg" @click="start">Izveidot</button>
+        </div>
     </div>
 </template>
+
+<style scoped>
+button {
+    border-radius: 35px;
+}
+</style>
 
 <script>
     import { getUsername } from '../helpers';
