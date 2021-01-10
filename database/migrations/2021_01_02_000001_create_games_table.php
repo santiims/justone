@@ -11,7 +11,7 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('code');
-            $table->json('state');
+            $table->json('state')->nullable()->default(null);
             $table->boolean('finished')->default(0);
         });
     }

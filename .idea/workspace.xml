@@ -2,29 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8914adba-a9ef-4f75-8aa0-14546e97e20f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/GameRpcController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000000_create_players_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000001_create_games_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000002_create_games_players_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000003_create_words_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/createjoin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/LoginService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Structures/GameState.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/BaseModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Player.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GameRpcController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GameRpcController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginRpcController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginRpcController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_000000_create_players_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000000_create_players_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_000001_create_games_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_000001_create_games_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/basic/input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/basic/input.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/join.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/join.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +28,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -49,7 +45,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homestead@localhost [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homestead@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homestead@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homestead@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="players: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -212,7 +231,16 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:homestead@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@57053464" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3dbbc671" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:homestead@localhost [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:homestead@localhost [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3b10b95a" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -238,7 +266,10 @@
       <workItem from="1609594171681" duration="1741000" />
       <workItem from="1609595935175" duration="1792000" />
       <workItem from="1609597751966" duration="1835000" />
-      <workItem from="1609599606095" duration="539000" />
+      <workItem from="1609599606095" duration="1389000" />
+      <workItem from="1610284931899" duration="1788000" />
+      <workItem from="1610286757982" duration="1792000" />
+      <workItem from="1610288593252" duration="1791000" />
     </task>
     <servers />
   </component>
@@ -246,45 +277,49 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1023" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609594428162">
+    <state x="1023" y="209" width="816" height="679" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610287426064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1023" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609594428162" />
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1609595899906">
+    <state x="1023" y="209" width="816" height="679" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610287426064" />
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom" timestamp="1610288153550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609595899906" />
-    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1609595899905">
+    <state width="1293" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610288153550" />
+    <state width="1293" height="283" key="GridCell.Tab.0.center" timestamp="1610288153550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609595899905" />
-    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1609595899905">
+    <state width="1293" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610288153550" />
+    <state width="1293" height="283" key="GridCell.Tab.0.left" timestamp="1610288153550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609595899905" />
-    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1609595899906">
+    <state width="1293" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610288153550" />
+    <state width="1293" height="283" key="GridCell.Tab.0.right" timestamp="1610288153550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609595899906" />
+    <state width="1293" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610288153550" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1609594694182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1609594694182" />
-    <state x="676" y="334" key="NewPhpClassDialog" timestamp="1609597068759">
+    <state x="676" y="334" key="NewPhpClassDialog" timestamp="1610289315206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="676" y="334" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609597068759" />
+    <state x="676" y="334" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610289315206" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1609595784705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609595784705" />
-    <state x="481" y="192" key="SettingsEditor" timestamp="1609440684066">
+    <state x="481" y="192" key="SettingsEditor" timestamp="1610289167309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="481" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609440684066" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1609599607344">
+    <state x="481" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610289167309" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1610290415117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609599607344" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610290415117" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1610288897494">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610288897494" />
   </component>
 </project>

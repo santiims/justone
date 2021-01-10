@@ -51,7 +51,7 @@ button {
             }
         },
         methods: {
-            getCode() {
+            async getCode() {
                 axios.post('/game-rpc/get-code')
                     .then(response => this.code = response.data.code);
             },
