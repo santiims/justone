@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input :type="inputType" :maxlength="maxlength" v-model="value" @change="emit" style="width: 250px; height: 50px; padding: 15px; border: 1px solid #C7B299; color: #998675;"/>
+        <input :type="inputType" :placeholder="placeholder" :maxlength="maxlength" v-model="value" @change="emit" style="width: 250px; height: 50px; padding: 15px; border: 1px solid #C7B299; color: #998675;"/>
     </div>
 </template>
 
@@ -8,12 +8,19 @@
     export default {
         props: {
             isPassword: {
+                required: false,
                 type: Boolean,
                 default: false
             },
             limit: {
+                required: false,
                 type: Number,
                 default: null
+            },
+            placeholder: {
+                required: false,
+                type: String,
+                default: ''
             }
         },
         computed: {

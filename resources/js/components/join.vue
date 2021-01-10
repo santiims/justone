@@ -17,6 +17,8 @@
         <h2>Pievienoties</h2>
 
         <VueInput @valueChanged="setCode"></VueInput>
+
+        <p v-if="error">{{ error }}</p>
     </div>
 </template>
 
@@ -28,6 +30,11 @@
         name: "join",
         mounted() {
             getUsername(this.$store.state);
+        },
+        data() {
+            return {
+                error: ''
+            };
         },
         components: {VueInput},
         computed: {
@@ -43,6 +50,8 @@
                 }).then(response => {
                     if (!!response.data) {
                         this.$router.push('play');
+                    } else {
+                        this.error = 'Istaba ar šādu kodu neeksistē!';
                     }
                 })
             }

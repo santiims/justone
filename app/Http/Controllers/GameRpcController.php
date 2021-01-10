@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class GameRpcController extends Controller
 {
-    public function getCode()
+    public function getCode(): array
     {
-        $existingCodes = (new Game)->where('finished', '=', 0)
+        $existingCodes = (new Game())->where('finished', '=', 0)
             ->get()
             ->map(fn(Game $game) => $game->code)
             ->all();
@@ -25,16 +25,31 @@ class GameRpcController extends Controller
         ];
     }
 
-    public function start()
+    public function start(Request $request): bool
     {
-        // todo
+        $code = $request->code;
+
+        $game = new Game();
+        $game->code = $code;
+        $game->save();
+
+        $request->session()->put(['code' => $code]);
+
         return true;
     }
 
-    public function join(Request $request)
+    public function join(Request $request): bool
     {
-        // todo
-        return true;
+        $code = $request->code;
+
+        $game = (new Game())->where('code', '=', $code)->first();
+
+        if ($game) {
+            $request->session()->put($code);
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -43,7 +58,8 @@ class GameRpcController extends Controller
      * @param int $length
      * @return string
      */
-    private function generateRandomString($length = 6) {
-        return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    private function generateRandomString($length = 6): string
+    {
+        return substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
     }
 }

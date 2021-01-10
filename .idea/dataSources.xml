@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:33060/homestead</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="homestead@localhost [2]" uuid="137fe286-539c-4ebf-a7be-9817f0fbd378">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:33060/homestead</jdbc-url>
+    </data-source>
   </component>
 </project>

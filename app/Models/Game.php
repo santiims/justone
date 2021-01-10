@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * @mixin Builder
@@ -12,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $state JSON encoded data of game's current state
  * @property boolean $finished
  */
-class Game extends Model
+class Game extends BaseModel
 {
     protected $table = 'games';
 }

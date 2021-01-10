@@ -26,6 +26,7 @@ Route::get('/join', fn() => view('welcome'));
 Route::get('/join', fn() => view('welcome'));
 Route::get('/createjoin', fn() => view('welcome'));
 Route::get('/create', fn() => view('welcome'));
+Route::get('/play', fn() => view('welcome'));
 
 // RPC calls
 Route::post('/login-rpc/login', [LoginRpcController::class, 'login']);

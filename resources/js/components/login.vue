@@ -12,19 +12,19 @@
 					<img src="images\logo.svg" alt="logo" class="logo-medium d-block mx-auto"/>
 				</div>
 				<div class="d-flex flex-row text-center text-white">
-					<div class="register py-3 flex-grow-1 login-signup-active-bar" @click="initRegister">
+					<div :class="getRegisterClass" @click="initRegister">
 						PIEREĢISTRĒTIES
 					</div>
 
-					<div class="login py-3 flex-grow-1" @click="initLogin">
+					<div :class="getLoginClass" @click="initLogin">
 						IEIET
 					</div>
 				</div>
 			</div>
 			<div class="credentials my-4 text-center">
-				<VueInput @valueChanged="setUsername" :limit="10"/>
+				<VueInput @valueChanged="setUsername" :limit="10" :placeholder="'Lietotājvārds'"/>
                 <div class="mb-3"></div>
-				<VueInput @valueChanged="setPassword" :isPassword="true"/>
+				<VueInput @valueChanged="setPassword" :isPassword="true" :placeholder="'Parole'"/>
 			</div>
 
 			<div class="continue bg-color-brown py-1" @click="submit">
@@ -48,6 +48,18 @@
 				password: '',
 			};
 		},
+        computed: {
+		    getRegisterClass() {
+		        const baseClass = 'register py-3 flex-grow-1';
+
+		        return this.anonymousUser ? baseClass + ' login-signup-active-bar' : baseClass;
+            },
+            getLoginClass() {
+		        const baseClass = 'login py-3 flex-grow-1';
+
+		        return this.anonymousUser ? baseClass : baseClass + ' login-signup-active-bar';
+            },
+        },
 		methods: {
 			initRegister() {
 				this.anonymousUser = true;
