@@ -1,7 +1,7 @@
 <template>
 	<div class="container mt-2">
 		<img src="images\logo.svg" alt="logo" class="logo-small d-inline"/>
-		<h3 class="color-brown d-inline">Par spēli</h3>
+		<h3 class="d-inline">Par spēli</h3>
 		
 		<p class="mt-4">
 			<b>
@@ -20,7 +20,7 @@
 			Lai iegūtu savu rezultātu, saskaitiet savus veiksmīgi atminētās kārtis un salīdziniet to kopējo skaitu ar tabulu.
 		</p>
 		
-		<h3 class="color-brown mt-4">Spēles gaita</h3>
+		<h3 class="mt-4">Spēles gaita</h3>
 		
 		<p>
 			Kopā spēlei ir 13 gājieni, pēc tam tiek skaitīti atminētie noslēpumainie vārdi un salīdzina punktus ar <b>kopējo rezultātu tabulu</b>.
@@ -41,7 +41,7 @@
 			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
 				1
 			</div>
-			<h4 class="color-brown">Izvēlieties noslēpumaino vārdu</h4>
+			<h4>Izvēlieties noslēpumaino vārdu</h4>
 		</div>
 
 		<p>
@@ -52,7 +52,7 @@
 			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
 				2
 			</div>
-			<h4 class="color-brown">Pavediena izdomāšana</h4>
+			<h4>Pavediena izdomāšana</h4>
 		</div>
 
 		<p>
@@ -69,7 +69,7 @@
 			un <i>$</i> ir atļauts palīdzēt kādam uzminēt <i>Ameriku</i>.
 		</p>
 		
-		<h4 class="color-brown">Nederīgie vārdi</h4>
+		<h4>Nederīgie vārdi</h4>
 		
 		<ul class="color-brown">
 			<li>Noslēpumainais vārds, bet ir rakstīts savādāk. <i>Piemērs:</i> Auksts un Augsts</li>
@@ -82,7 +82,7 @@
 			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
 				3
 			</div>
-			<h4 class="color-brown">Pavedienu salīdzināšana</h4>
+			<h4>Pavedienu salīdzināšana</h4>
 		</div>
 
 		<p>
@@ -90,7 +90,7 @@
 			tad spēles vadītājs izņem līdzīgos un nederīgos vārdus, jo pavediens var būt <i>Tikai Viens</i> arī starp uzrakstītajiem vārdiem. 
 		</p>
 		
-		<h4 class="color-brown">Vienādie vārdi:</h4>
+		<h4>Vienādie vārdi:</h4>
 		
 		<p>
 			Divi identiski vārdi. <i>Piemērs:</i> Punkts un Punkts.
@@ -112,7 +112,7 @@
 			<div class="bg-triangle color-brown d-flex justify-content-center align-items-center">
 				4
 			</div>
-			<h4 class="color-brown">Minēt</h4>
+			<h4>Minēt</h4>
 		</div>
 
 		<p>

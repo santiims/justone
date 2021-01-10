@@ -5,7 +5,7 @@
                 <img src="images\logo.svg" alt="logo" class="logo-small"/>
             </div>
             <div class="message d-inline px-3">
-                <h5 class="color-brown m-0 font-weight-bold">{{ getMessage }}</h5>
+                <h5 class="m-0 font-weight-bold">{{ getMessage }}</h5>
             </div>
             <div class="info d-inline ml-auto">
                 <router-link :to="{name: 'info'}">
@@ -13,10 +13,11 @@
                 </router-link>
             </div>
         </div>
+        <div class="text-center">
+            <h2>Pievienoties</h2>
 
-        <h2>Pievienoties</h2>
-
-        <VueInput @valueChanged="setCode"></VueInput>
+            <VueInput @valueChanged="setCode"></VueInput>
+        </div>
 
         <p v-if="error">{{ error }}</p>
     </div>
